@@ -14,8 +14,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 |  Day | Deliverable | Status
 |---|---| ---|
-|Day 1| Project Description | Incomplete
+|Day 1| Project Description | COMPLETE
 |Day 1| Wireframes / Priority Matrix / Timeline | Incomplete
+|Day 2| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 3| Core Application Structure (HTML, CSS, etc.) | Incomplete
 |Day 4| MVP & Bug Fixes | Incomplete
 |Day 5| Final Touches | Incomplete
@@ -23,6 +24,9 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 
 ## Project Description
+
+Hopper Fly fishing is a two player fishing game where the goal is to catch fish. Each player gets three total casts to catch fish. 
+The game ends when both players have cast three times each. The player with the greater total weight of fish wins the game.
 
 FLY FISHING GAME: ( 2 players).
 -Winning conditions: Player with the largest fish after 3 casts wins.
@@ -69,7 +73,7 @@ MORE ACTIONS
 
 ## Wireframes
 
-https://support.mockflow.com/article/108-how-to-share-projects-in-mockflow
+https://wireframepro.mockflow.com/view/Mfd188db4b5e7693fe34acb20a0bbafd31605487135938#/page/27bf803c53ad48ab8d69c976acae1fcc
 
 ## Time/Priority Matrix 
 
