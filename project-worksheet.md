@@ -178,23 +178,21 @@ Game States
 #### MVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Modal | H | 2hr | hr | -hr|
-| Carousel | H | 2hr | -hr | -hr|
-| Adding Form | H | 1.5hr| -hr | -hr |
-| Other sections and flex | M | 4hr | 2hr | -hr|
-| Game Player HTML & CSS | H | 3hrs| 2hr | -hr |
-| Game play main function | LH | 1hr | -hr | -hr|
-| Total | H | 15.5hrs| -hrs | -hrs |
+| Modal | H | 4hr | hr | -hr|
+| Carousel | H | 4hr | -hr | -hr|
+| Build game logic | H | 16hr| -hr | -hr |
+| Basic styling | H | 6hr | 2hr | -hr|
+| Game Player HTML & CSS | H | 8hrs| 2hr | -hr |
+| Add players to DOM | H | 2hr | -hr | -hr|
+| Total | H | 40hrs| -hrs | -hrs |
 
 #### PostMVP
 | Component | Priority | Estimated Time | Time Invetsted | Actual Time |
 | --- | :---: |  :---: | :---: | :---: |
-| Play game for 3 rounds | L | 3hr | -hr | -hr|
-| Interactive Banner | M | 4hr | -hr | -hr|
-| Materialize | H | 4hr | -hr | -hr|
-| Bootstrap | H | 4hr | -hr | -hr|
-| Make own icon | L | 4hr | -hr | -hr|
-| Total | H | 20hrs| -hrs | -hrs |
+| Fancy graphics/pics| L | 8hr | -hr | -hr|
+| Refactor JS & CSS | M | 8hr | -hr | -hr|
+| Addition functions| L | 24hr | -hr | -hr|
+| Total | H | 40hrs| -hrs | -hrs |
 
 ## Additional Libraries
  Use this section to list all supporting libraries and thier role in the project. 
