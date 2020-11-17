@@ -113,21 +113,21 @@ High Priority
 		- Button resets game
 
 Medium Priority
-	- CSS
-		- Making the game more visually appealing
-		- Icons for fish, reel, cast
+- CSS
+	- Making the game more visually appealing
+	- Icons for fish, reel, cast
 
 Low Priority 
-	- Add in additional actions
-		- Change from 3 casts per player to decrementing time limit (2 minutes?)
-		- Add random chance of fish striking at fly landing on water initially
-		- Add reel in slow/fast functionality
-			- Fast decrements reel in length faster, higher chance of snapping line
-			- Slow decrements slower, lower chance of snapping line, higher chance of fish swimming off
-		- Add in set hook button
-			- set hook triggers invisible decrementing timer
-			- hook not set fast enough, fish jumps off and swims away
-			- hook set in time, reel in
+- Add in additional actions
+	- Change from 3 casts per player to decrementing time limit (2 minutes?)
+	- Add random chance of fish striking at fly landing on water initially
+	- Add reel in slow/fast functionality
+		- Fast decrements reel in length faster, higher chance of snapping line
+		- Slow decrements slower, lower chance of snapping line, higher chance of fish swimming off
+	- Add in set hook button
+		- set hook triggers invisible decrementing timer
+		- hook not set fast enough, fish jumps off and swims away
+		- hook set in time, reel in
 		
 #### MVP 
 - Build HTML/CSS using wireframe
