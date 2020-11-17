@@ -24,41 +24,47 @@ You are **responsible** for scheduling time with your squad to seek approval for
 
 ## Project Description
 
-GAME IDEA:
-Fly fishing game ( 2 players).
-Win State : Catch the bigger fish and/or most fish.
-Lose State: Catch the least fish or lesser of weight.
-Modal & carousel to choose fishing location
-Rod/reel parameters (cast distance, line strength, luck) - array
-Fish parameters (type, size, stamina -> higher stamina is more difficult to reel in) - array
-Actions:
-Tie your fly
-Cast your fly (random cast distance between 2 numbers)
-Fly lands & fish strike (random chance to have fish strike when fly lands)
-Reel in (random distance between 2 numbers)
-Fish strike (random chance for fish to strike)
-Set hook & reel in (take into account fish stamina
+FLY FISHING GAME: ( 2 players).
+-Winning conditions: Player with the largest fish after 3 casts wins.
+- Use a modal containing 2 buttons [Start Game][Instructions].
+- Use carousel to pick fishing location.
+- Rod/reel parameters (cast distance, line strength, luck) - array
+- Fish parameters (type, size, stamina -> higher stamina is more difficult to reel in) - array
 
-Action buttons: (event listeners need for each button)
-	Tie Fly: 
-Array of fly’s [dry fly, wet fly, hopper] - make array
-Alert box for type of fly tied stating ready to fish.
+GAME ACTIONS & ACTION BUTTONS: (use click event listeners)
+- Tie Fly
+(BASIC)
+	- Ties random fly from array of flys (dry fly, wet fly, hopper)
+		-Modal states the fly that was tied.
 
-	Cast: 
-Function(?) to check if fly has been tied.
-If a fly is tied, you cast.
-If the fly is not tied, an alert pops up advising to tie a fly.
-	
-	Set Hook:
-		Random timer begins to run, triggered off of fish striking
-		Wait too long to set the hook and fish will get away.
-		Set the hook fast enough and you start to reel the fish in.
-	
-	Reel In:
-		Reel in speed
-			Slow - uses less stamina
-			Fast - more stamina
-				Lose too much stamina, line breaks, and fish gets away
+- Cast Fly (random cast distance between 2 numbers)
+(BASIC)
+	- If no fly is tied, Modal states you can't fish with air, you need a fly.
+	- Modal states fly landed on the water, waiting for fish
+	(EXTENDED)
+		- Random chance for a fish to strike when the fly lands on the water & you have to reel in.
+		
+
+
+- Reel In
+(BASIC)
+	-Button decrements from cast distance so it has to be pressed multiple times to reel in fish.
+	- Action takes into account the fish stamina/line strength to potentially have your fishing line break
+	(EXTENDED)
+		- Use 2 reel in buttons (slow/fast)
+			- slow reel-in takes decrements shorter distance with less chance of line breaking
+			- fast reel-in decrements greater distance with greater chance of line breaking
+			- random chance for a fish to strike when reeling in without a fish on the line
+
+MORE ACTIONS
+(EXTENDED)
+	- Fish "fights back" by swimming away, incrementing the the reel in distance.
+	- Fish strike action triggers a need to set the hook
+		- starts a random invisible countdown for setting the hook
+			- if hook isn't set, fish gets away
+				- hook is set, you can real in
+					- set hook button is used
+
 
 
 ## Wireframes
@@ -83,7 +89,7 @@ The functionality will then be divided into two separate lists: MVP and PostMVP.
 
 #### MVP (examples)
 
-- Add game player stats to the dom
+- Base game works in the browser.
 - Render html on the page
 - Allow user to choose player 
 - Restart the game when the user loses
@@ -108,7 +114,6 @@ Time frames are also key in the development cycle.  You have limited time to cod
 | Adding Form | H | 1.5hr| -hr | -hr |
 | Other sections and flex | M | 4hr | 2hr | -hr|
 | Game Player HTML & CSS | H | 3hrs| 2hr | -hr |
-| Create Classes in JS for Enemies | H | 3hr | -hr | -hr|
 | Game play main function | L | 1hr | -hr | -hr|
 | Total | H | 15.5hrs| -hrs | -hrs |
 
