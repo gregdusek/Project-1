@@ -191,7 +191,7 @@ Game States
 | --- | :---: |  :---: | :---: | :---: |
 | Fancy graphics/pics| L | 8hr | -hr | -hr|
 | Refactor JS & CSS | M | 8hr | -hr | -hr|
-| Addition functions| L | 24hr | -hr | -hr|
+| Additional functions| L | 24hr | -hr | -hr|
 | Total | H | 40hrs| -hrs | -hrs |
 
 ## Additional Libraries
