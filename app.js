@@ -19,11 +19,12 @@ GLOBAL VARS
 =========================*/
 
 const backgroundImage = [
-    "https://i.imgur.com/eld9h7F.jpg",
-    "https://i.imgur.com/RgjgLFw.jpg",
-    "https://i.imgur.com/xxoV8FQ.jpg",
-    "https://i.imgur.com/omTBhfL.jpg",
-    "https://i.imgur.com/Vt4eRFn.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670765/Hopper%20Fly%20Fishing/moutainvalley_eidikw.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670764/Hopper%20Fly%20Fishing/mountainpond_rqluit.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670764/Hopper%20Fly%20Fishing/mountainstream_fhlopa.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670764/Hopper%20Fly%20Fishing/flowingriver_lzqqrq.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670764/Hopper%20Fly%20Fishing/desertriver_qqfkge.jpg",
+    "https://res.cloudinary.com/gregdusek/image/upload/v1605670764/Hopper%20Fly%20Fishing/icelandicriver_bgt1xq.jpg",
 ];
 
 let slideIndex = 0;
