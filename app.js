@@ -2,15 +2,19 @@
 CACHED DOM NOTES
 =========================*/
 
-const beginButton = document.querySelector(".lets-fish");
-const modal = document.querySelector(".modal");
-const carousel = document.querySelector(".carousel");
-const carouselImage = document.querySelector('.carousel img');
-const carouselNext = document.querySelector('.carousel-next');
-const carouselPrevious = document.querySelector('.carousel-previous');
-const carouselSelect = document.querySelector('.carousel-select');
-const getStarted = document.querySelector('.get-started');
 
+const playGameButton = document.querySelector(".play-game");
+const modalPlayGame = document.querySelector(".modal-play-game");
+const gameRulesButton = document.querySelector(".game-rules");
+const getStarted = document.querySelector(".get-started");
+const modalGameRules = document.querySelector(".modal-game-rules")
+const resetGame = document.querySelector(".reset-game");
+const carousel = document.querySelector(".carousel");
+const carouselImage = document.querySelector(".carousel img");
+const carouselNext = document.querySelector(".carousel-next");
+const carouselPrevious = document.querySelector(".carousel-previous");
+const carouselSelect = document.querySelector(".carousel-select");
+const closeRules = document.querySelector(".close-rules");
 
 
 
@@ -38,7 +42,7 @@ FUNCTIONS
 // that either adds or removes a .open class on the modal
 
 const toggleModal = () => {
-    modal.classList.toggle("open");
+    modalPlayGame.classList.toggle("open");
 }
 // Update carousel image
 const updateCarouselImage = () => {
@@ -81,10 +85,21 @@ const openCarousel = () => {
     carousel.classList.add('open');
 }
 
+const openModalRules = () => {
+    modalGameRules.classList.toggle("open");
+}
+
+const closeModalRules = () => {
+    modalGameRules.classList.remove("open");
+}
 
 
-
-
+/* =============================
+RESET GAME
+============================= */
+function resetTheGame () {
+    resetGame = location.reload();
+}
 
 
 /* =============================
@@ -94,10 +109,14 @@ EVENT LISTENERS
 // When the user clicks on the begin game button
 // Toggle the modal
 
-beginButton.addEventListener("click", toggleModal);
+
+playGameButton.addEventListener("click", toggleModal);
+gameRulesButton.addEventListener("click", openModalRules);
+resetGame.addEventListener("click", resetTheGame);
 carouselNext.addEventListener("click", changeSlideNext);
 carouselPrevious.addEventListener("click", changeSlidePrevious);
 carouselSelect.addEventListener("click", updateBackground);
 getStarted.addEventListener("click", openCarousel);
+closeRules.addEventListener("click", closeModalRules);
 
 

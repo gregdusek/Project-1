@@ -29,7 +29,7 @@ h2 {
       transform: translate(-50%, -50%);
   }
     
-.modal {
+.modal-game-rules {
     background-color: steelblue;
     padding: 30px;
     width: 50vw;
@@ -45,9 +45,11 @@ h2 {
     margin: auto;
     display: none;
   }
-  .modal.open {
+
+  .modal-game-rules.open {
     display: block;
   }
+
   .carousel {
     background-color: steelblue;
     padding: 30px;
@@ -64,9 +66,33 @@ h2 {
     margin: auto;
     display: none;
   }
+
   .carousel.open {
     display: block;
   }
+
   .carousel img {
-    width: 100%;
+    max-width: 450px;
+    max-height: 280px;
+  }
+
+  .modal-play-game {
+    background-color: steelblue;
+    padding: 30px;
+    width: 50vw;
+    max-width: 500px;
+    text-align: center;
+    font-family: Copperplate, "Copperplate Gothic Light", fantasy; 
+    border-radius: 10px;
+    position: fixed;
+    top: 45%; 
+    transform: translateY(-45%);
+    left:0; 
+    right:0;
+    margin: auto;
+    display: none;
+  }
+
+  .modal-play-game.open {
+    display: block;
   }
