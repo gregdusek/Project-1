@@ -18,6 +18,8 @@ const closeRules = document.querySelector("#close-rules");
 const tieFlyButton = document.querySelector("#tie-fly");
 const modalGameBoard = document.querySelector("#modal-game-board");
 const castButton = document.querySelector("#cast");
+const reelButton = document.querySelector("#reel-in");
+
 
 
 /* ======================
@@ -159,16 +161,39 @@ const tieFly = () => {
     let currentFly = flyArray[random];
     modalGameBoard.innerHTML = `<h2>You selected a ${currentFly}. Now you're ready to cast!</h2>`;
     toggleGameBoardModal();
-    console.log(currentFly);
+    // console.log(currentFly);
  };
 
 
-let castDistance = null;
-const castFly = () => {
-    const currentDistance = Math.floor((Math.random() * 30) +10); 
-    function castDistance(random);
-    modalGameBoard.innerHTML = `<h2>You casted ${curretCast} feet. Now reel it in and hook a fish!</h2>`
+// Function to cast fly, update the gameboard modal
+// that announces how far you cast.
+const min = 10;
+const max = 30;
+
+function castFly() {
+
+    // Can't get the modalGameBoard to open and present the text below when you try casting
+    // without tying a fly.
+
+    // if (modalGameBoard.classList.toggle("closed")) {
+    //     modalGameBoard.innerHTML = `<h2>You can't catch fish out of thin air. You need bait. Go tie a fly!</h2>`;
+    // } else {
+        let castDistance = Math.floor(Math.random() * (max - min + 1) + min);
+        modalGameBoard.innerHTML = `<h2>You casted ${castDistance} feet. Now reel it in and hook a fish!</h2>`;
+        // console.log(castDistance);
 };
+
+
+
+const reelIn = () => {
+    let reelDistance = 
+    modalGameBoard.innerHTML = `<h2>You have ${reelDistance} more feet. Keep reeling in.</h2>`;
+};
+
+
+
+
+
 
 /* =============================
 RESET GAME
@@ -192,5 +217,4 @@ getStarted.addEventListener("click", openCarousel);
 closeRules.addEventListener("click", toggleModalRules);
 tieFlyButton.addEventListener("click", tieFly);
 castButton.addEventListener("click", castFly);
-
-
+reelButton.addEventListener("click", reelIn);
