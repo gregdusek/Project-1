@@ -10,37 +10,40 @@
 </head>
 <body>
     <h1><span>Welcome to Hopper Fly Fishing</span></h1>
-        <div class="gameboard">
+            <!-- Hopper Home-->
+            <section id="Hopper-homepage">
+                <!-- Hopper Div -->
+                <div class="home-panel flex-container">
+                    <div class="home-controls">
+                        <button id="play-game">Play Game</button>
+                        <button id="game-rules">Game Rules</button>
+                    </div>
+                </div>
+            </section>
+           <div class="gameboard">
             <div class="gamestats">
                 <div class="player-id">Player #</div>
                 <div class="fish-weight">Total Fish Weight: #</div>
                 <div class="fish-caught">Total Fish Caught #</div>
                 <div class="image"></div>
             </div>
-            <button class="reset-game">Reset Game</button>
-            <button class="tie-fly-button">Tie Fly
-                <div class="tie-fly-label"></div>
-                <div class="tie-fly-img"></div>
-            </button>
-            <button class="cast-button">Cast
-                <div class="cast-img"></div>
-                <div class="cast-label"></div>
-            </button>
-            <button class="reel-in-button">Reel In
-                <div class="reel-img"></div>
-                <div class="reel-label"></div>
-            </button>
-        </div>
-        <!-- Hopper Home-->
-        <section id="Hopper-homepage">
-            <!-- Hopper Div -->
-            <div class="home-panel flex-container">
-                <div class="home-controls">
-                    <button class="play-game">Play Game</button>
-                    <button class="game-rules">Game Rules</button>
-                </div>
+            <button id="reset-game">Reset Game</button>
+            <div class="bottom-panel">
+                <button class="button" id="tie-fly">Tie Fly
+                    <div id="tie-fly-label"></div>
+                    <div id="tie-fly-img"></div>
+                </button>
+                <button class="button" id="cast">Cast
+                    <div id="cast-img"></div>
+                    <div id="cast-label"></div>
+                </button>
+                <button class="button" id="reel-in">Reel In
+                    <div id="reel-img"></div>
+                    <div id="reel-label"></div>
+                </button>
             </div>
-        </section>
+        </div>
+
             <!-- Carousel -->
     <div class="carousel">
         <h2>Select fishing location</h2>
@@ -50,18 +53,21 @@
         <button class="carousel-next">Next</button>
     </div>
 
-    <!-- Modal -->
-    <div class="modal-play-game">
-        <h2>You've read the rules and know how the game works.
+    <!-- Modals -->
+    <div id="modal-play-game">
+        <h2>You've read the rules and you know how the game works.
             Let's Fish!
         </h2>
-        <button class="get-started">Get Started</button>
+        <button id="get-started">Get Started</button>
     </div>
-    <div class="modal-game-rules">
+    <div id="modal-game-rules">
         <h2>Game Rules
             This is the rules of the game.
         </h2>
-        <button class="close-rules">Close</button>
+        <button id="close-rules">Close</button>
+    </div>
+    <div id="modal-game-board">
+        <!-- use innerHTML for gameboard actions -->
     </div>
 </body>
 </html>

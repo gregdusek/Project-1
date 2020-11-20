@@ -3,19 +3,21 @@ CACHED DOM NOTES
 =========================*/
 
 
-const playGameButton = document.querySelector(".play-game");
-const modalPlayGame = document.querySelector(".modal-play-game");
-const gameRulesButton = document.querySelector(".game-rules");
-const getStarted = document.querySelector(".get-started");
-const modalGameRules = document.querySelector(".modal-game-rules")
-const resetGame = document.querySelector(".reset-game");
+const playGameButton = document.querySelector("#play-game");
+const modalPlayGame = document.querySelector("#modal-play-game");
+const gameRulesButton = document.querySelector("#game-rules");
+const getStarted = document.querySelector("#get-started");
+const modalGameRules = document.querySelector("#modal-game-rules")
+const resetGame = document.querySelector("#reset-game");
 const carousel = document.querySelector(".carousel");
 const carouselImage = document.querySelector(".carousel img");
 const carouselNext = document.querySelector(".carousel-next");
 const carouselPrevious = document.querySelector(".carousel-previous");
 const carouselSelect = document.querySelector(".carousel-select");
-const closeRules = document.querySelector(".close-rules");
-
+const closeRules = document.querySelector("#close-rules");
+const tieFlyButton = document.querySelector("#tie-fly");
+const modalGameBoard = document.querySelector("#modal-game-board");
+const castButton = document.querySelector("#cast");
 
 
 /* ======================
@@ -32,6 +34,59 @@ const backgroundImage = [
 ];
 
 let slideIndex = 0;
+
+
+// Fly array 
+const flyArray = ["Mayfly Nymph", "Caddisfly Hatch", "Stonefly Nymph", "Squirminator Jig", "Blue Winged Olive"]
+
+
+// Fish array with stats
+let fish = [
+    {
+        type: "Rainbow Trout",
+        stamina: 7,
+    },
+    {
+        type: "Brown Trout",
+        stamina: 6,
+    },
+    {
+        type: "Steel Head",
+        stamina: 12,
+    },
+    {
+        type: "Walleye",
+        stamina: 18,
+    },
+    {
+        type: "Black Bass",
+        stamina: 9,
+    },
+    {
+        type: "Pike",
+        stamina: 30,
+    }
+]
+
+//  Player array with stats
+let player = [
+    {
+        name: "Player 1",
+        stamina: 10,
+    },
+    {
+        name: "Player 2",
+        stamina: 10,
+    },
+]
+
+// =============================
+// if(Math.random() < player[0].stamina) {
+//     let modal.innerHTML = `<h2> You've casted</h2>`
+// }
+
+
+
 
 /* =============================
 FUNCTIONS
@@ -85,14 +140,35 @@ const openCarousel = () => {
     carousel.classList.add('open');
 }
 
-const openModalRules = () => {
+// Opens the game rules modal
+const toggleModalRules = () => {
     modalGameRules.classList.toggle("open");
 }
 
-const closeModalRules = () => {
-    modalGameRules.classList.remove("open");
+
+// Opens gameboard modal when fly is tied
+const toggleGameBoardModal = () => {
+    modalGameBoard.classList.toggle("open");
 }
 
+// Function to tie your fly, open the gameboard modal
+// that announces the fly you tied.
+let currentFly = null;
+const tieFly = () => {
+    const random = Math.floor(Math.random() * flyArray.length);
+    let currentFly = flyArray[random];
+    modalGameBoard.innerHTML = `<h2>You selected a ${currentFly}. Now you're ready to cast!</h2>`;
+    toggleGameBoardModal();
+    console.log(currentFly);
+ };
+
+
+let castDistance = null;
+const castFly = () => {
+    const currentDistance = Math.floor((Math.random() * 30) +10); 
+    function castDistance(random);
+    modalGameBoard.innerHTML = `<h2>You casted ${curretCast} feet. Now reel it in and hook a fish!</h2>`
+};
 
 /* =============================
 RESET GAME
@@ -106,17 +182,15 @@ function resetTheGame () {
 EVENT LISTENERS
 ============================= */
 
-// When the user clicks on the begin game button
-// Toggle the modal
-
-
 playGameButton.addEventListener("click", toggleModal);
-gameRulesButton.addEventListener("click", openModalRules);
+gameRulesButton.addEventListener("click", toggleModalRules);
 resetGame.addEventListener("click", resetTheGame);
 carouselNext.addEventListener("click", changeSlideNext);
 carouselPrevious.addEventListener("click", changeSlidePrevious);
 carouselSelect.addEventListener("click", updateBackground);
 getStarted.addEventListener("click", openCarousel);
-closeRules.addEventListener("click", closeModalRules);
+closeRules.addEventListener("click", toggleModalRules);
+tieFlyButton.addEventListener("click", tieFly);
+castButton.addEventListener("click", castFly);
 
 
