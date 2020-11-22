@@ -22,11 +22,17 @@
             </section>
            <div class="gameboard">
             <div class="gamestats">
-                <div class="player-id">Player #</div>
-                <div class="fish-weight">Total Fish Weight: #</div>
-                <div class="fish-caught">Total Fish Caught #</div>
-                <div class="image"></div>
-            </div>
+                    <div class="stats-container">
+                        <div>Player 1</div>
+                        <div>Fish:</div>
+                        <div>Total Weight: </div>
+                        <div>Casts: </div>
+                        <br>
+                        <div>Player 2</div>
+                        <div>Fish: </div>
+                        <div>Total Weight: </div>
+                        <div>Casts: </div>
+                    </div>
             <button id="reset-game">Reset Game</button>
             <div class="bottom-panel">
                 <button class="button" id="tie-fly">Tie Fly
@@ -61,9 +67,15 @@
         <button id="get-started">Get Started</button>
     </div>
     <div id="modal-game-rules">
-        <h2>Game Rules
-            This is the rules of the game.
-        </h2>
+        <h2 style="text-align: center;">Rules Of The Game.</h2>
+        <p>Player one will start the game.</p>
+        <p>Two players compete against one another catching fish.</p>
+        <p>Each player will cast till they reel in 3 fish.</p>
+        <p>The total weight of each fish is added together.</p>
+        <p>The player with the heavier weight of fish wins the game.</p>
+        <p>A player may hook a fish that's unable to be reeled in.</p>
+        <p>That's why they call it fishing and not catching.</p>
+        <p>Have fun!</p>
         <button id="close-rules">Close</button>
     </div>
     <div id="modal-game-board">
