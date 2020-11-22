@@ -11,7 +11,7 @@ Hopper Fly Fishing is a two player fly fishing game where players compete agains
 
 [Game Demo](https://gregdusek.github.io/Project_1/)
 
-###Game Summary:
+### Game Summary:
 In order to be successful, players will have to tie flys, cast, and reel in the big ones. Players will have the opportunity to select the location they would like to fish from midwest rivers, to open plains streams, and even icelandic rivers. An assortment of bait including dry flys, wet flys, jigs, and hoppers will help players land the big ones. Each player will have as many casts as needed to reel in fish but will limited to a total of 3 fish to catch for the day. Upon catching 3 fish, the player turn changes.
 
 **Win Condition:** 
